@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_016_01_atk_bullet.xml-->
+<behavior name="td_Hero_016_01_atk_bullet" agenttype="td_bulletagent" version="5">
+  <node class="Selector" id="0">
+    <node class="Sequence" id="19">
+      <node class="Condition" id="3">
+        <property Operator="Equal" />
+        <property Opl="int Self.td_bulletagent::init" />
+        <property Opr="const int 0" />
+      </node>
+      <node class="Assignment" id="20">
+        <property CastRight="false" />
+        <property Opl="float Self.td_bulletagent::speed" />
+        <property Opr="const float 10" />
+      </node>
+      <node class="Assignment" id="21">
+        <property CastRight="false" />
+        <property Opl="string Self.td_bulletagent::hangpoint" />
+        <property Opr="const string &quot;righthand&quot;" />
+      </node>
+      <node class="Assignment" id="23">
+        <property CastRight="false" />
+        <property Opl="int Self.td_bulletagent::explodetimes" />
+        <property Opr="const int 0" />
+      </node>
+      <node class="Assignment" id="24">
+        <property CastRight="false" />
+        <property Opl="float Self.td_bulletagent::lifetime" />
+        <property Opr="const float -1" />
+      </node>
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="int Self.td_bulletagent::init" />
+        <property Opr="const int 1" />
+      </node>
+    </node>
+    <node class="Sequence" id="7">
+      <node class="Or" id="6">
+        <node class="Condition" id="2">
+          <property Operator="GreaterEqual" />
+          <property Opl="int Self.td_bulletagent::explodetimes" />
+          <property Opr="const int 1" />
+        </node>
+        <node class="And" id="18">
+          <node class="Condition" id="12">
+            <property Operator="Greater" />
+            <property Opl="float Self.td_bulletagent::lifetime" />
+            <property Opr="const float -1" />
+          </node>
+          <node class="Condition" id="11">
+            <property Operator="Less" />
+            <property Opl="float Self.td_bulletagent::lifetime" />
+            <property Opr="const float 0" />
+          </node>
+        </node>
+      </node>
+      <node class="Action" id="10">
+        <property Method="Self.td_bulletagent::destroyself()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="Sequence" id="13">
+      <node class="Condition" id="14">
+        <property Operator="Equal" />
+        <property Opl="Self.td_bulletagent::touchtarget()" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.td_bulletagent::addnormalexplode(&quot;testexplode#0.3&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="8">
+        <property Method="Self.td_bulletagent::adddamage(&quot;Mpatk-Tpdef&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="1">
+        <property Method="Self.td_bulletagent::addexplodetimes()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="Action" id="16">
+      <property Method="Self.td_bulletagent::normalrun()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_025_02_skill.xml-->
+<behavior name="td_Hero_025_02_skill" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="IfElse" id="2">
+      <node class="Condition" id="4">
+        <property Operator="GreaterEqual" />
+        <property Opl="Self.td_skillagent::getpower()" />
+        <property Opr="const int 8" />
+      </node>
+      <node class="Sequence" id="7">
+        <node class="Action" id="8">
+          <property Method="Self.td_skillagent::addpower(&quot;-8&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="9">
+          <property Method="Self.td_skillagent::getskilltargetbysquare(&quot;10#1#enemy#100#false&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="1">
+          <property Method="Self.td_skillagent::addeffecttotarget(&quot;testexplode#foot#false#0.5&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="3">
+          <property Method="Self.td_skillagent::adddamagetotarget(&quot;300&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+      <node class="Noop" id="5" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

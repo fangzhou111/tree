@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_045_02_atk.xml-->
+<behavior name="td_Hero_045_02_atk" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.td_skillagent::getcharactertarget()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.td_skillagent::putactioninfo(&quot;attack1&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.td_skillagent::gopreskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="IfElse" id="4">
+      <node class="Condition" id="8">
+        <property Operator="Equal" />
+        <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="Sequence" id="10">
+        <node class="Action" id="9">
+          <property Method="Self.td_skillagent::getskilltargetbysquare(&quot;10#1#enemy#3#false&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="11">
+          <property Method="Self.td_skillagent::addeffecttotarget(&quot;testexplode#foot#false#0.6&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="12">
+          <property Method="Self.td_skillagent::adddamagetotarget(&quot;80&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.td_skillagent::createbullet(&quot;14501&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.td_skillagent::goafterskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

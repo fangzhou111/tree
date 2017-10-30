@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workspace name="Tree" xmlmetafolder="meta" folder="behaviors" export="exported" language="cs">
+  <xmlmeta>meta.xml</xmlmeta>
+  <export>
+    <cs>
+      <isexported>False</isexported>
+      <exportunifiedfile>True</exportunifiedfile>
+      <folder>../exported</folder>
+    </cs>
+    <bson>
+      <isexported>True</isexported>
+    </bson>
+    <xml>
+      <isexported>True</isexported>
+    </xml>
+  </export>
+</workspace>

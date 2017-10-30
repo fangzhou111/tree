@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_005_01_skill.xml-->
+<behavior name="td_Hero_005_01_skill" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="1">
+    <node class="Action" id="0">
+      <property Method="Self.td_skillagent::gettargetbydis(&quot;false#enemy#1&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="IfElse" id="3">
+      <node class="Condition" id="5">
+        <property Operator="Greater" />
+        <property Opl="Self.td_skillagent::getcharactercountbybaseid(&quot;1#us&quot;)" />
+        <property Opr="const int 0" />
+      </node>
+      <node class="Action" id="6">
+        <property Method="Self.td_skillagent::createbullet(&quot;20504&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.td_skillagent::createbullet(&quot;20501&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

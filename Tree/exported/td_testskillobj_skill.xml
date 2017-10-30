@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_testskillobj_skill.xml-->
+<behavior name="td_testskillobj_skill" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.td_skillagent::getskilltargetbyskillposcircle(&quot;5#0#360#0#enemy#10#false&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.td_skillagent::addeffecttotarget(&quot;testexplode#foot#false#0.2&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="2">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

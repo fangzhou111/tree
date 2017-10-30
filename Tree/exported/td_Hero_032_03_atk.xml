@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_032_03_atk.xml-->
+<behavior name="td_Hero_032_03_atk" agenttype="td_skillagent" version="5">
+  <node class="IfElse" id="9">
+    <node class="Condition" id="10">
+      <property Operator="Equal" />
+      <property Opl="Self.td_skillagent::random(&quot;1&quot;)" />
+      <property Opr="const bool true" />
+    </node>
+    <node class="Sequence" id="11">
+      <node class="Action" id="12">
+        <property Method="Self.td_skillagent::putactioninfo(&quot;attack1&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="13">
+        <property Method="Self.td_skillagent::gopreskill()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="14">
+        <property Method="Self.td_skillagent::getskilltargetbycircle(&quot;999#0#360#0#enemy#999#false&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="15">
+        <property Method="Self.td_skillagent::addeffecttotarget(&quot;testexplode#foot#false#0.3&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="16">
+        <property Method="Self.td_skillagent::adddamagetotarget(&quot;Mpatk-Tpdef&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="17">
+        <property Method="Self.td_skillagent::addbuff(&quot;13203&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="18">
+        <property Method="Self.td_skillagent::goafterskill()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Assignment" id="19">
+        <property CastRight="false" />
+        <property Opl="bool Self.td_skillagent::done" />
+        <property Opr="const bool true" />
+      </node>
+    </node>
+    <node class="Sequence" id="0">
+      <node class="Action" id="7">
+        <property Method="Self.td_skillagent::putactioninfo(&quot;attack1&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="2">
+        <property Method="Self.td_skillagent::gopreskill()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="1">
+        <property Method="Self.td_skillagent::getskilltargetbysquare(&quot;10#1#enemy#100#false&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.td_skillagent::addeffecttotarget(&quot;testexplode#foot#false#0.3&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="4">
+        <property Method="Self.td_skillagent::adddamagetotarget(&quot;Mpatk-Tpdef&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="8">
+        <property Method="Self.td_skillagent::addbuff(&quot;13202&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Action" id="3">
+        <property Method="Self.td_skillagent::goafterskill()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Assignment" id="6">
+        <property CastRight="false" />
+        <property Opl="bool Self.td_skillagent::done" />
+        <property Opr="const bool true" />
+      </node>
+    </node>
+  </node>
+</behavior>

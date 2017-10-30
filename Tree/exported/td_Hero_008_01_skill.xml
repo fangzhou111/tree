@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_008_01_skill.xml-->
+<behavior name="td_Hero_008_01_skill" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="1">
+    <node class="Action" id="0">
+      <property Method="Self.td_skillagent::gettargetbydis(&quot;false#enemy#1&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.td_skillagent::addskillobj(&quot;30801#1#6&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="4">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

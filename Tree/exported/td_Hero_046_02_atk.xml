@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_046_02_atk.xml-->
+<behavior name="td_Hero_046_02_atk" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.td_skillagent::getcharactertarget()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.td_skillagent::putactioninfo(&quot;attack1&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.td_skillagent::gopreskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="IfElse" id="11">
+      <node class="Condition" id="13">
+        <property Operator="Greater" />
+        <property Opl="Self.td_skillagent::getcharactercountbytype(&quot;5#us&quot;)" />
+        <property Opr="const int 1" />
+      </node>
+      <node class="Sequence" id="12">
+        <node class="Action" id="14">
+          <property Method="Self.td_skillagent::createbullet(&quot;14601&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Assignment" id="15">
+          <property CastRight="false" />
+          <property Opl="int Self.td_skillagent::curwaitframe" />
+          <property Opr="const int 3" />
+        </node>
+        <node class="Action" id="16">
+          <property Method="Self.td_skillagent::wait()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="17">
+          <property Method="Self.td_skillagent::createbullet(&quot;14601&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Assignment" id="18">
+          <property CastRight="false" />
+          <property Opl="int Self.td_skillagent::curwaitframe" />
+          <property Opr="const int 3" />
+        </node>
+        <node class="Action" id="19">
+          <property Method="Self.td_skillagent::wait()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="20">
+          <property Method="Self.td_skillagent::createbullet(&quot;14601&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Assignment" id="21">
+          <property CastRight="false" />
+          <property Opl="int Self.td_skillagent::curwaitframe" />
+          <property Opr="const int 3" />
+        </node>
+        <node class="Action" id="22">
+          <property Method="Self.td_skillagent::wait()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="23">
+          <property Method="Self.td_skillagent::createbullet(&quot;14601&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.td_skillagent::createbullet(&quot;14601&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="IfElse" id="4">
+      <node class="Condition" id="8">
+        <property Operator="Equal" />
+        <property Opl="Self.td_skillagent::random(&quot;0.15&quot;)" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="Sequence" id="24">
+        <node class="Action" id="25">
+          <property Method="Self.td_skillagent::getselftotarget()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="10">
+          <property Method="Self.td_skillagent::addbuff(&quot;14601&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+      <node class="Noop" id="9" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.td_skillagent::goafterskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

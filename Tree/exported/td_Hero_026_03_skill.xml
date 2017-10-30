@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_026_03_skill.xml-->
+<behavior name="td_Hero_026_03_skill" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.td_skillagent::getskilltargetbycircle(&quot;100#0#360#0#enemy#100#false&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.td_skillagent::addbuff(&quot;22603&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.td_skillagent::getselftotarget()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="4">
+      <property Method="Self.td_skillagent::addbuff(&quot;22604&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_042_03_atk_buff.xml-->
+<behavior name="td_Hero_042_03_atk_buff" agenttype="td_buffagent" version="5">
+  <node class="Selector" id="0">
+    <node class="Sequence" id="1">
+      <node class="Condition" id="2">
+        <property Operator="Equal" />
+        <property Opl="bool Self.td_buffagent::init" />
+        <property Opr="const bool false" />
+      </node>
+      <node class="Assignment" id="3">
+        <property CastRight="false" />
+        <property Opl="float Self.td_buffagent::life" />
+        <property Opr="const float 0.3" />
+      </node>
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="float Self.td_buffagent::curlife" />
+        <property Opr="const float 0.3" />
+      </node>
+      <node class="Action" id="8">
+        <property Method="Self.td_buffagent::addstun()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Assignment" id="5">
+        <property CastRight="false" />
+        <property Opl="bool Self.td_buffagent::init" />
+        <property Opr="const bool true" />
+      </node>
+    </node>
+    <node class="Sequence" id="6">
+      <node class="Action" id="7">
+        <property Method="Self.td_buffagent::subtractround()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Condition" id="15">
+        <property Operator="LessEqual" />
+        <property Opl="float Self.td_buffagent::curlife" />
+        <property Opr="const float 0" />
+      </node>
+      <node class="Action" id="16">
+        <property Method="Self.td_buffagent::destroyself()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+  </node>
+</behavior>

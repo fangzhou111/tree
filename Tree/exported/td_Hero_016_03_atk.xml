@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_016_03_atk.xml-->
+<behavior name="td_Hero_016_03_atk" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.td_skillagent::getcharactertarget()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.td_skillagent::putactioninfo(&quot;attack1&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.td_skillagent::gopreskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="IfElse" id="4">
+      <node class="And" id="29">
+        <node class="Condition" id="30">
+          <property Operator="Equal" />
+          <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+          <property Opr="const bool true" />
+        </node>
+        <node class="Condition" id="31">
+          <property Operator="Greater" />
+          <property Opl="Self.td_skillagent::getcharactercountbybaseid(&quot;1#us&quot;)" />
+          <property Opr="const int 0" />
+        </node>
+      </node>
+      <node class="Sequence" id="9">
+        <node class="IfElse" id="10">
+          <node class="Condition" id="20">
+            <property Operator="Equal" />
+            <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="Action" id="21">
+            <property Method="Self.td_skillagent::createbullet(&quot;11603&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Action" id="22">
+            <property Method="Self.td_skillagent::createbullet(&quot;11601&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="Assignment" id="11">
+          <property CastRight="false" />
+          <property Opl="int Self.td_skillagent::curwaitframe" />
+          <property Opr="const int 3" />
+        </node>
+        <node class="Action" id="13">
+          <property Method="Self.td_skillagent::wait()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="IfElse" id="12">
+          <node class="Condition" id="23">
+            <property Operator="Equal" />
+            <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="Action" id="24">
+            <property Method="Self.td_skillagent::createbullet(&quot;11603&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Action" id="25">
+            <property Method="Self.td_skillagent::createbullet(&quot;11601&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="Assignment" id="14">
+          <property CastRight="false" />
+          <property Opl="int Self.td_skillagent::curwaitframe" />
+          <property Opr="const int 3" />
+        </node>
+        <node class="Action" id="15">
+          <property Method="Self.td_skillagent::wait()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="IfElse" id="16">
+          <node class="Condition" id="26">
+            <property Operator="Equal" />
+            <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="Action" id="27">
+            <property Method="Self.td_skillagent::createbullet(&quot;11603&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Action" id="28">
+            <property Method="Self.td_skillagent::createbullet(&quot;11601&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+      </node>
+      <node class="IfElse" id="17">
+        <node class="And" id="32">
+          <node class="Condition" id="33">
+            <property Operator="Greater" />
+            <property Opl="Self.td_skillagent::getcharactercountbybaseid(&quot;1#us&quot;)" />
+            <property Opr="const int 0" />
+          </node>
+          <node class="Condition" id="18">
+            <property Operator="Equal" />
+            <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+            <property Opr="const bool true" />
+          </node>
+        </node>
+        <node class="Action" id="19">
+          <property Method="Self.td_skillagent::createbullet(&quot;11603&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="5">
+          <property Method="Self.td_skillagent::createbullet(&quot;11601&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.td_skillagent::goafterskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

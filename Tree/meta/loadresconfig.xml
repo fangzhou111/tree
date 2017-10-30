@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<config>
+  <res classname ="td_skillagent" methedname ="addeffecttotarget" restype ="effect"></res>
+  <res classname ="td_skillagent" methedname ="addeffecttopoint" restype ="effect"></res>
+  <res classname ="td_bulletagent" methedname ="addnormalexplode" restype ="effect"></res>
+  <res classname ="td_skillagent" methedname ="addeffect" restype ="effect"></res>
+  <res classname ="td_skillagent" methedname ="addeffecttoself" restype ="effect"></res>
+  <res classname ="td_skillagent" methedname ="addeffecttoskillpos" restype ="effect"></res>
+  <res classname ="td_buffagent" methedname ="addeffect" restype ="effect"></res>
+
+  <xmldoc classname ="td_skillagent" methedname ="gonextskill"></xmldoc>
+  <xmldoc classname ="td_skillagent" methedname ="triggerskill"></xmldoc>
+  <xmldoc classname ="td_skillagent" methedname ="addtrigger"></xmldoc>
+  <xmldoc classname ="td_skillagent" methedname ="addskillobj"></xmldoc>
+  <xmldoc classname ="td_bulletagent" methedname ="addskillobj"></xmldoc>
+  <xmldoc classname ="td_buffagent" methedname ="addskillobj"></xmldoc>
+  <xmldoc classname ="td_triggeragent" methedname ="goskill"></xmldoc>
+  <xmldoc classname ="td_buffagent" methedname ="doskill"></xmldoc>
+
+  <lua classname ="td_skillagent" methedname= "createbullet" restype ="bullet"></lua>
+  <lua classname ="td_skillagent" methedname= "addbuff" restype ="buff"></lua>
+  <lua classname ="td_bulletagent" methedname= "addbuff" restype ="buff"></lua>
+  <lua classname ="td_buffagent" methedname= "addbuff" restype ="buff"></lua>
+
+  <rigclass classname ="td_characteragent"></rigclass>
+  <rigclass classname ="td_bulletagent"></rigclass>
+  <rigclass classname ="td_skillagent"></rigclass>
+  <rigclass classname ="td_buffagent"></rigclass>
+  <rigclass classname ="td_triggeragent"></rigclass>
+</config>

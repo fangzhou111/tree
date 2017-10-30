@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<metas version="5" language="cs">
+  <types>
+    <enumtype Type="behaviac::EBTStatus" DisplayName="" Desc="">
+      <enum NativeValue="behaviac::BT_INVALID" Value="BT_INVALID" DisplayName="BT_INVALID" Desc="BT_INVALID" />
+      <enum NativeValue="behaviac::BT_SUCCESS" Value="BT_SUCCESS" DisplayName="BT_SUCCESS" Desc="BT_SUCCESS" />
+      <enum NativeValue="behaviac::BT_FAILURE" Value="BT_FAILURE" DisplayName="BT_FAILURE" Desc="BT_FAILURE" />
+      <enum NativeValue="behaviac::BT_RUNNING" Value="BT_RUNNING" DisplayName="BT_RUNNING" Desc="BT_RUNNING" />
+    </enumtype>
+    <struct Type="System::Object" DisplayName="Object" Desc="Object" IsRefType="true" />
+    <struct Type="LuaInterface::LuaTable" DisplayName="LuaTable" Desc="LuaTable" IsRefType="true" />
+    <struct Type="LuaInterface::LuaFunction" DisplayName="LuaFunction" Desc="LuaFunction" IsRefType="true" />
+  </types>
+  <agents>
+    <agent classfullname="behaviac::Agent" DisplayName="behaviac.Agent" Desc="behaviac.Agent" IsRefType="true">
+      <Method Name="LogMessage" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="message" Desc="message" Type="string" />
+      </Method>
+      <Method Name="VectorLength" DisplayName="" Desc="" ReturnType="int" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+      </Method>
+      <Method Name="VectorAdd" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+        <Param DisplayName="element" Desc="element" Type="System::Object*" />
+      </Method>
+      <Method Name="VectorRemove" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+        <Param DisplayName="element" Desc="element" Type="System::Object*" />
+      </Method>
+      <Method Name="VectorContains" DisplayName="" Desc="" ReturnType="bool" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+        <Param DisplayName="element" Desc="element" Type="System::Object*" />
+      </Method>
+      <Method Name="VectorClear" DisplayName="" Desc="" ReturnType="void" Class="behaviac::Agent" Static="true" Public="true">
+        <Param DisplayName="vector" Desc="vector" Type="System.Collections.IList" />
+      </Method>
+    </agent>
+    <agent classfullname="behaviac::BaseAgent" base="behaviac::Agent" DisplayName="BaseAgent" Desc="BaseAgent" IsRefType="true">
+      <Member Name="table" DisplayName="table" Desc="table" Type="LuaInterface::LuaTable*" Class="behaviac::BaseAgent" Public="true" />
+      <Member Name="fun" DisplayName="fun" Desc="fun" Type="LuaInterface::LuaFunction*" Class="behaviac::BaseAgent" Public="true" />
+      <Method Name="Get" DisplayName="Get" Desc="Get" ReturnType="string" Class="behaviac::BaseAgent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+      <Method Name="Set" DisplayName="Set" Desc="Set" ReturnType="void" Class="behaviac::BaseAgent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+        <Param DisplayName="value" Desc="value" Type="string" />
+      </Method>
+      <Method Name="Action" DisplayName="Action" Desc="Action" ReturnType="behaviac::EBTStatus" Class="behaviac::BaseAgent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+    </agent>
+    <agent classfullname="td_buffagent" base="behaviac::Agent" DisplayName="td_buffagent" Desc="td_buffagent" IsRefType="true">
+      <Member Name="init" DisplayName="BUFF_初始化" Desc="init" Type="bool" Class="td_buffagent" Public="true" />
+      <Member Name="dotimes" DisplayName="BUFF_执行次数" Desc="dotimes" Type="int" Class="td_buffagent" Public="true" />
+      <Member Name="curdotimes" DisplayName="BUFF_当前执行次数" Desc="curdotimes" Type="int" Class="td_buffagent" Public="true" />
+      <Member Name="curlife" DisplayName="BUFF_剩余时间" Desc="curlife" Type="float" Class="td_buffagent" Public="true" />
+      <Member Name="life" DisplayName="BUFF_总时间" Desc="life" Type="float" Class="td_buffagent" Public="true" />
+      <Member Name="count" DisplayName="BUFF_层数" Desc="addcount" Type="int" Class="td_buffagent" Public="true" />
+      <Member Name="intervaltime" DisplayName="BUFF_生效间隔时间" Desc="intervaltime" Type="float" Class="td_buffagent" Public="true" />
+      <Method Name="doskill" DisplayName="BUFF_执行技能" Desc="doskill" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+      <Method Name="addstun" DisplayName="BUFF_添加眩晕" Desc="addstun" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true" />
+      <Method Name="addshield" DisplayName="BUFF_添加护盾" Desc="addshield" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="value" Desc="value" Type="string" />
+      </Method>
+      <Method Name="addatrribute" DisplayName="BUFF_增加属性（名称#值）" Desc="addatrribute" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="removeattribute" DisplayName="BUFF_还原属性" Desc="removeattribute" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true" />
+      <Method Name="adddamage" DisplayName="BUFF_造成伤害" Desc="adddamage" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="damage" Desc="damage" Type="string" />
+      </Method>
+      <Method Name="destroyself" DisplayName="BUFF_消亡" Desc="destroyself" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true" />
+      <Method Name="subtractround" DisplayName="BUFF_剩余时间减少" Desc="subtractround" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true" />
+      <Method Name="addtimes" DisplayName="BUFF_执行次数增加" Desc="addtimes" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true" />
+      <Method Name="random" DisplayName="BUFF_概率（0-1）" Desc="random" ReturnType="bool" Class="td_buffagent" Public="true">
+        <Param DisplayName="x" Desc="x" Type="string" />
+      </Method>
+      <Method Name="addeffect" DisplayName="BUFF_添加特效（名字#挂点#时间）" Desc="addeffect" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="cangobuffeffect" DisplayName="BUFF_是否达到生效间隔" Desc="cangobuffeffect" ReturnType="bool" Class="td_buffagent" Public="true" />
+      <Method Name="istargetdie" DisplayName="BUFF_目标是否死亡" Desc="istargetdie" ReturnType="bool" Class="td_buffagent" Public="true" />
+      <Method Name="movetotheother" DisplayName="BUFF_转移给离自己最近的目标(目标类型)" Desc="movetotheother" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="addskillobj" DisplayName="BUFF_创建技能体(技能id#生效间隔时间#技能体存活时间)" Desc="addskillobj" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="addbuff" DisplayName="BUFF_添加buff" Desc="addbuff" ReturnType="behaviac::EBTStatus" Class="td_buffagent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+    </agent>
+    <agent classfullname="td_bulletagent" base="behaviac::Agent" DisplayName="td_bulletagent" Desc="td_bulletagent" IsRefType="true">
+      <Member Name="init" DisplayName="子弹_初始化" Desc="init" Type="int" Class="td_bulletagent" Public="true" />
+      <Member Name="explodetimes" DisplayName="子弹_爆炸次数" Desc="explodetimes" Type="int" Class="td_bulletagent" Public="true" />
+      <Member Name="speed" DisplayName="子弹_速度" Desc="speed" Type="float" Class="td_bulletagent" Public="true" />
+      <Member Name="hangpoint" DisplayName="子弹_挂点" Desc="hangpoint" Type="string" Class="td_bulletagent" Public="true" />
+      <Member Name="lifetime" DisplayName="子弹_存活时间" Desc="lifetime" Type="float" Class="td_bulletagent" Public="true" />
+      <Method Name="destroyself" DisplayName="子弹_消亡" Desc="destroyself" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true" />
+      <Method Name="hastarget" DisplayName="子弹_有目标" Desc="hastarget" ReturnType="bool" Class="td_bulletagent" Public="true" />
+      <Method Name="setautotarget" DisplayName="子弹_设置子弹创建者的目标为目标" Desc="setautotarget" ReturnType="void" Class="td_bulletagent" Public="true" />
+      <Method Name="normalrun" DisplayName="子弹_飞行" Desc="normalrun" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true" />
+      <Method Name="touchtarget" DisplayName="子弹_接触目标" Desc="touchtarget" ReturnType="bool" Class="td_bulletagent" Public="true" />
+      <Method Name="adddamage" DisplayName="子弹_创建并显示伤害" Desc="adddamage" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true">
+        <Param DisplayName="damagetype" Desc="damagetype" Type="string" />
+      </Method>
+      <Method Name="addexplodetimes" DisplayName="子弹_增加爆炸次数" Desc="addexplodetimes" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true" />
+      <Method Name="addnormalexplode" DisplayName="子弹_创建爆炸特效(资源#时间)" Desc="addnormalexplode" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="istargetdie" DisplayName="子弹_目标是否死亡" Desc="istargetdie" ReturnType="bool" Class="td_bulletagent" Public="true" />
+      <Method Name="addbuff" DisplayName="子弹_为目标添加BUFF" Desc="addbuff" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+      <Method Name="setnearesttarget" DisplayName="子弹_设置最近的敌方单位为目标（弹射范围#是否来回弹）" Desc="setnearesttarget" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="addskillobj" DisplayName="子弹_创建技能体(技能id#生效间隔时间#技能体存活时间)" Desc="addskillobj" ReturnType="behaviac::EBTStatus" Class="td_bulletagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="random" DisplayName="子弹_概率（0-1）" Desc="random" ReturnType="bool" Class="td_bulletagent" Public="true">
+        <Param DisplayName="x" Desc="x" Type="string" />
+      </Method>
+    </agent>
+    <agent classfullname="td_skillagent" base="behaviac::Agent" DisplayName="td_skillagent" Desc="td_skillagent" IsRefType="true">
+      <Member Name="done" DisplayName="技能_技能_执行完毕" Desc="done" Type="bool" Class="td_skillagent" Public="true" />
+      <Member Name="curloopcount" DisplayName="技能_技能_循环次数" Desc="curloopcount" Type="int" Class="td_skillagent" Public="true" />
+      <Member Name="curwaitframe" DisplayName="技能_技能_等待帧数" Desc="curwaitframe" Type="int" Class="td_skillagent" Public="true" />
+      <Member Name="targetnum" DisplayName="技能_技能_目标数量" Desc="targetnum" Type="int" Class="td_skillagent" Public="true" />
+      <Method Name="getskilltargetlst" DisplayName="技能_选择多个目标（目标类型#人数）" Desc="getskilltargetlst" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getskilltargetbycircle" DisplayName="技能_选择扇形范围内目标（大半径#小半径#角度#偏移角度#目标类型#人数#显示警示）" Desc="getskilltargetbycircle" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getskilltargetbysquare" DisplayName="技能_选择方形范围内目标（长#宽#目标类型#人数#显示警示）" Desc="getskilltargetbysquare" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getskilltargetbytargetcircle" DisplayName="技能_选择当前目标列表扇形范围内目标（大半径#小半径#角度#偏移角度#目标类型#人数#显示警示）" Desc="getskilltargetbytargetcircle" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getskilltargetbyskillposcircle" DisplayName="技能_选择技能位置扇形范围内目标（大半径#小半径#角度#偏移角度#目标类型#人数#显示警示）" Desc="getskilltargetbyskillposcircle" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="findrandomtarget" DisplayName="技能_选择随机目标" Desc="findrandomtarget" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="type" Desc="type" Type="string" />
+      </Method>
+      <Method Name="putactioninfo" DisplayName="技能_装载技能动作" Desc="putactioninfo" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+      <Method Name="addbuff" DisplayName="技能_为目标添加BUFF" Desc="addbuff" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+      <Method Name="adddamagetotarget" DisplayName="技能_对目标造成伤害" Desc="adddamagetotarget" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="addeffecttoskillpos" DisplayName="技能_在技能所在的位置创建特效（名字#时间）" Desc="addeffecttoskillpos" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="addeffecttotarget" DisplayName="技能_为目标创建特效（名字#挂点#跟随目标#时间）" Desc="addeffecttotarget" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="gopreskill" DisplayName="技能_执行技能前摇" Desc="gopreskill" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true" />
+      <Method Name="goafterskill" DisplayName="技能_执行技能后摇" Desc="goafterskill" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true" />
+      <Method Name="getselftotarget" DisplayName="技能_获取自己为目标" Desc="getselftotarget" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true" />
+      <Method Name="getuptargetlstbyattr" DisplayName="技能_获取某方按某属性升序排列目标（目标类型#属性#人数）" Desc="getuptargetlstbyattr" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getdowntargetlstbyattr" DisplayName="技能_获取某方按某属性降序排列目标（目标类型#属性#人数）" Desc="getdowntargetlstbyattr" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="cleartarget" DisplayName="技能_清空当前技能目标" Desc="cleartarget" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true" />
+      <Method Name="random" DisplayName="技能_概率（0-1）" Desc="random" ReturnType="bool" Class="td_skillagent" Public="true">
+        <Param DisplayName="x" Desc="x" Type="string" />
+      </Method>
+      <Method Name="getcharactertarget" DisplayName="技能_获取当前目标" Desc="getcharactertarget" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true" />
+      <Method Name="createbullet" DisplayName="技能_创建子弹" Desc="createbullet" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="name" Desc="name" Type="string" />
+      </Method>
+      <Method Name="istargetplayerdie" DisplayName="技能_判断是否有技能目标死亡" Desc="istargetplayerdie" ReturnType="bool" Class="td_skillagent" Public="true" />
+      <Method Name="istargetplayeralldie" DisplayName="技能_判断是否所有技能目标死亡" Desc="istargetplayerdie" ReturnType="bool" Class="td_skillagent" Public="true" />
+      <Method Name="addeffecttoself" DisplayName="技能_为自己创建特效（名字#挂点#跟随目标#时间）" Desc="addeffecttoself" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="gettargetbydis" DisplayName="技能_按距离获取目标（是否远到近#目标类型#人数）" Desc="gettargetbydis" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="wait" DisplayName="技能_等待" Desc="wait" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true" />
+      <Method Name="changemodelscale" DisplayName="技能_变大体型" Desc="changemodelscale" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="times" Desc="times" Type="float" />
+      </Method>
+      <Method Name="addskillobj" DisplayName="技能_创建技能体(技能id#生效间隔时间#技能体存活时间)" Desc="addskillobj" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="addpower" DisplayName="技能_获取能量" Desc="addpower" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getcharactercountbybaseid" DisplayName="技能_获取某id角色数量（角色baseid#角色类型）" Desc="getcharactercountbybaseid" ReturnType="int" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="gettargetbycharacterbaseid" DisplayName="技能_获取某角色id目标（角色baseid#角色类型）" Desc="gettargetbycharacterbaseid" ReturnType="behaviac::EBTStatus" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getcharactercountbytype" DisplayName="技能_获取某属性类型角色数量（角色属性类型#角色类型）" Desc="getcharactercountbytype" ReturnType="int" Class="td_skillagent" Public="true">
+        <Param DisplayName="info" Desc="info" Type="string" />
+      </Method>
+      <Method Name="getpower" DisplayName="技能_获取当前能量值" Desc="getpower" ReturnType="int" Class="td_skillagent" Public="true" />
+    </agent>
+  </agents>
+</metas>

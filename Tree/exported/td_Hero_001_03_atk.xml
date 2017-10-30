@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_001_03_atk.xml-->
+<behavior name="td_Hero_001_03_atk" agenttype="td_skillagent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Action" id="1">
+      <property Method="Self.td_skillagent::getcharactertarget()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="7">
+      <property Method="Self.td_skillagent::putactioninfo(&quot;attack1&quot;)" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Action" id="2">
+      <property Method="Self.td_skillagent::gopreskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="IfElse" id="4">
+      <node class="Condition" id="8">
+        <property Operator="Equal" />
+        <property Opl="Self.td_skillagent::random(&quot;0.2&quot;)" />
+        <property Opr="const bool true" />
+      </node>
+      <node class="Sequence" id="10">
+        <node class="Action" id="13">
+          <property Method="Self.td_skillagent::getselftotarget()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="14">
+          <property Method="Self.td_skillagent::addeffecttotarget(&quot;testexplode#foot#false#5&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="11">
+          <property Method="Self.td_skillagent::addskillobj(&quot;30103#1#5&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="12">
+          <property Method="Self.td_skillagent::getcharactertarget()" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+        <node class="Action" id="9">
+          <property Method="Self.td_skillagent::createbullet(&quot;10101&quot;)" />
+          <property ResultOption="BT_INVALID" />
+        </node>
+      </node>
+      <node class="Action" id="5">
+        <property Method="Self.td_skillagent::createbullet(&quot;10101&quot;)" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+    </node>
+    <node class="Action" id="3">
+      <property Method="Self.td_skillagent::goafterskill()" />
+      <property ResultOption="BT_INVALID" />
+    </node>
+    <node class="Assignment" id="6">
+      <property CastRight="false" />
+      <property Opl="bool Self.td_skillagent::done" />
+      <property Opr="const bool true" />
+    </node>
+  </node>
+</behavior>

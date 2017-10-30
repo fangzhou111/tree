@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: td_Hero_022_02_atk_buff.xml-->
+<behavior name="td_Hero_022_02_atk_buff" agenttype="td_buffagent" version="5">
+  <node class="Selector" id="0">
+    <node class="Sequence" id="1">
+      <node class="Condition" id="2">
+        <property Operator="Equal" />
+        <property Opl="bool Self.td_buffagent::init" />
+        <property Opr="const bool false" />
+      </node>
+      <node class="Assignment" id="3">
+        <property CastRight="false" />
+        <property Opl="float Self.td_buffagent::life" />
+        <property Opr="const float 5" />
+      </node>
+      <node class="Assignment" id="4">
+        <property CastRight="false" />
+        <property Opl="float Self.td_buffagent::curlife" />
+        <property Opr="const float 5" />
+      </node>
+      <node class="Assignment" id="12">
+        <property CastRight="false" />
+        <property Opl="float Self.td_buffagent::intervaltime" />
+        <property Opr="const float 1" />
+      </node>
+      <node class="Assignment" id="5">
+        <property CastRight="false" />
+        <property Opl="bool Self.td_buffagent::init" />
+        <property Opr="const bool true" />
+      </node>
+    </node>
+    <node class="Sequence" id="6">
+      <node class="Action" id="7">
+        <property Method="Self.td_buffagent::subtractround()" />
+        <property ResultOption="BT_INVALID" />
+      </node>
+      <node class="Selector" id="9">
+        <node class="Sequence" id="13">
+          <node class="Condition" id="10">
+            <property Operator="Equal" />
+            <property Opl="Self.td_buffagent::cangobuffeffect()" />
+            <property Opr="const bool true" />
+          </node>
+          <node class="Action" id="8">
+            <property Method="Self.td_buffagent::addeffect(&quot;testexplode#foot#0.4&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+          <node class="Action" id="11">
+            <property Method="Self.td_buffagent::adddamage(&quot;100&quot;)" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+        <node class="Sequence" id="14">
+          <node class="Condition" id="15">
+            <property Operator="LessEqual" />
+            <property Opl="float Self.td_buffagent::curlife" />
+            <property Opr="const float 0" />
+          </node>
+          <node class="Action" id="16">
+            <property Method="Self.td_buffagent::destroyself()" />
+            <property ResultOption="BT_INVALID" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</behavior>
